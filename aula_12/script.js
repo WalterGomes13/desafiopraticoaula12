@@ -1,4 +1,4 @@
-const livros = {
+let livros = {
     "livro1":{
         "nome":"Dune",
         "autor":"Frank Herbert",
@@ -54,12 +54,28 @@ btnMostrar.addEventListener('click',()=>{
     document.querySelector('#inform').append(label1,input1,label2,input2,label3,input3,label4,input4,label5,input5);
 
     listLivros.querySelector('#addLivro').addEventListener('click',()=>{
-        const listaLivros = createElement('div');
-        const nome = createElement('span');
-        nome.innerHTML = `${input1.value}`
-        listaLivros.appendChild(nome);
-        listLivros.querySelector('#lista').appendChild(listLivros);
+        const listaLivros = document.createElement('div');
+        for(let i =0;i<5;i++){      
+            const text = document.createElement('span');
+            const inform = document.querySelectorAll('input');
+            text.innerHTML = `${inform[i].value}`
+            listaLivros.appendChild(text);
+            listLivros.querySelector('#lista').appendChild(listaLivros);
+        };
+
+        const novoLivro = {
+            "nome":input1.value,
+            "autor":input2.value,
+            "genero":input3.value,
+            "ano":input4.value,
+            "keyWords":[input1.value,input2.value,input3.value],
+            "avaliacao":input5.value
+        };
+
+        livros.push(novoLivro);
     })
+
         
 });
+console.log(livros)
 
