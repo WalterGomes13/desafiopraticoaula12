@@ -101,8 +101,8 @@ function add(){
 };
 
 function alfaSort(){
+    seta[0].style.transform = 'rotate(180deg)';
     livros.sort((a, b) => {
-        seta[0].style.transform = 'rotate(180deg)';
         let nomeA = a.livro.nome.toUpperCase(); 
         let nomeB = b.livro.nome.toUpperCase(); 
         if (nomeA < nomeB) {
