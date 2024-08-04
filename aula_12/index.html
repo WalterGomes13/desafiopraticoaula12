@@ -7,11 +7,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Catálogo de livros online</h1>
-    <button id="mostrar">Exibir livros</button>
-    <div id="livros">
-        
-    </div>
+    <header>
+        <h1>Books</h1>
+        <div id="pesquisa">
+            <img src="lupa.png" alt="" id="lupa" onclick="pesquisar()">
+        </div>
+    </header>
+    <main>
+        <div id="filtros">
+            <span class="sort" onclick="alfaSort()">A-Z<img src="seta.png" id="seta" class="seta"></span>
+            <span class="sort" onclick="review()">Review<img src="seta.png" id="seta" class="seta"></span>
+        </div>
+        <ul id="livros">
+
+        </ul>
+        <form action="" id="addLivro">
+            <button type="button" id="addBtn" onclick="add()">Adicionar Livro</button>
+        </form>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
